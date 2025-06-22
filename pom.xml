@@ -1,12 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.example</groupId>
+  <groupId>de.htw_berlin.fb4.collaborative</groupId>
   <artifactId>collaborative-prose</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>collaborative-prose</name>
   <url>http://maven.apache.org</url>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -14,5 +15,90 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <!-- Peer 1: s-matthies -->
+    <dependency>
+    <groupId>de.htw_berlin.prose</groupId>
+    <artifactId>prose-sample</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </dependency>
+
+  <!-- Peer 2: eliseHtw -->
+  <dependency>
+    <groupId>de.htw_berlin.fb4.elise</groupId>
+    <artifactId>my-prose-app</artifactId>
+    <version>1.0.0</version>
+  </dependency>
+
+  <!-- Meine eigene Komponente -->
+  <dependency>
+    <groupId>de.htw_berlin.proseapp_Shamanina</groupId>
+    <artifactId>prose-app-deploy-sha-ma-ni</artifactId>
+    <version>1.0.0</version>
+  </dependency>
   </dependencies>
+
+  <!-- ProseBuilder Library -->
+  <dependency>
+  <groupId>de.htw_berlin.fb4.ossd</groupId>
+  <artifactId>prose_builder</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
+
+  <repositories>
+  <!-- Mein Repo-->
+  <repository>
+      <id>github-sha-ma-ni</id>
+      <url>https://maven.pkg.github.com/sha-ma-ni/prose-app-deploy</url>
+    </repository>
+    <!-- Peer 1 -->
+  <repository>
+    <id>github-s-matthies</id>
+    <url>https://maven.pkg.github.com/s-matthies/simple-prose</url>
+  </repository>
+  <!-- Peer 2 -->
+  <repository>
+    <id>github-elise</id>
+    <url>https://maven.pkg.github.com/eliseHtw/my-prose-app</url>
+  </repository>
+  <!-- Prose Builder Repo -->
+  <repository> 
+  <id>github</id> 
+  <url>https://maven.pkg.github.com/bs-jokri/prose-builder</url> 
+  <snapshots> 
+  <enabled>true</enabled> 
+  </snapshots> 
+  </repository>
+</repositories>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <repositories>
+  <!-- Peer 1: s-matthies -->
+  <dependency>
+  <groupId>de.htw_berlin.fb4.elise</groupId>
+  <artifactId>my-prose-app</artifactId>
+  <version>1.0.0</version>
+</dependency>
+  <repository>
+    <id>github-s-matthies</id>
+    <url>https://maven.pkg.github.com/s-matthies/simple-prose</url>
+  </repository>
+  <repository>
+    <id>github-sha-ma-ni</id>
+    <url>https://maven.pkg.github.com/sha-ma-ni/prose-app-deploy</url>
+  </repository>
+</repositories>
 </project>
