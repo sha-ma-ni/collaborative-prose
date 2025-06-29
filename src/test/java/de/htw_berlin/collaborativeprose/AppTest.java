@@ -1,4 +1,4 @@
-package com.example;
+package de.htw_berlin.fb4;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
